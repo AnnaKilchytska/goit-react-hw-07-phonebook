@@ -9,6 +9,7 @@ export const getFilteredContacts = createSelector(
   // Функція перетворювач
   (contacts, filter) => {
     // Виконуємо обчислення та повертаємо результат
+    console.log('contacts from selector', contacts);
     return contacts.filter(contact => {
       return contact.nameInput.toLowerCase().includes(filter.toLowerCase());
     });

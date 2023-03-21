@@ -17,7 +17,7 @@ function ContactList() {
 
   return (
     <>
-      {isLoading === true && <div>Loading...</div>}
+      {isLoading === true && <div className={css.isLoading}>Loading...</div>}
       <ul className={css.contactList}>
         {filteredContacts.map(contact => {
           return (

@@ -41,3 +41,8 @@
   background-color: #fa556e;
   border: 1px solid #fa556e;
 }
+
+.isLoading {
+  text-align: center;
+  font-size: 18px;
+}

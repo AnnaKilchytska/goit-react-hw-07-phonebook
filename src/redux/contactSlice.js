@@ -36,11 +36,12 @@ const contactsSlice = createSlice({
         // state.isLoading = false;
         // state.error = null;
         // state.items = action.payload;
+        console.log('fetching', action.payload);
         return {
           ...state,
           isLoading: false,
           error: null,
-          items: action.payload,
+          items: [...action.payload.sort((a, b) => b.id - a.id)],
         };
       })
       .addCase(fetchContacts.rejected, handleRejected)
